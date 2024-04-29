@@ -251,7 +251,7 @@ df_all = pd.concat(frames)
 
 ## 8. Group df_all by parent domain while retaining political affinity values
 ```
-df_parent = pd.DataFrame({'count_url' : df_all.groupby(['parent_domain','political_page_affinity']).size(), 'total_clicks': df_all.groupby(['parent_domain','political_page_affinity'])['clicks'].sum(), 'total_shares': df_all.groupby(['parent_domain','political_page_affinity'])['likes'].sum(), 'total_sharewoclicks': df_all.groupby(['parent_domain','political_page_affinity'])['share_without_clicks'].sum()}).reset_index()
+df_parent = pd.DataFrame({'count_url' : df_all.groupby(['parent_domain','political_page_affinity']).size(), 'total_clicks': df_all.groupby(['parent_domain','political_page_affinity'])['clicks'].sum(), 'total_shares': df_all.groupby(['parent_domain','political_page_affinity'])['shares'].sum(), 'total_sharewoclicks': df_all.groupby(['parent_domain','political_page_affinity'])['share_without_clicks'].sum()}).reset_index()
 ```
 
 ## 9. Calculate total_shares for each domain and append it to df_parent
