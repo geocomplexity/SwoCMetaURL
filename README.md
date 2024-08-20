@@ -5,6 +5,6 @@
 [Python packages]:
 > Python (3.10.11 | packaged by conda-forge)
 > 
-> nltk (version 3.8.1)
+> Natural Language Toolkit (NLTK) version 3.8.1
 > 
-> scikit-learn (version is 1.2.2)
+> scikit-learn version 1.2.2
