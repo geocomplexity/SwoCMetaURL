@@ -36,7 +36,7 @@ FROM {database}.{attributes_table}
 WHERE public_shares_top_country = 'US'
 GROUP BY parent_domain
 ORDER by frequency DESC
-LIMIT 5003)
+LIMIT 5000)
 SELECT parent_domain
 FROM RANK
 """
@@ -78,7 +78,7 @@ FROM {database}.{attributes_table}
 WHERE public_shares_top_country = 'US'
 GROUP BY parent_domain
 ORDER by frequency DESC
-LIMIT 5003)
+LIMIT 5000)
 SELECT parent_domain
 FROM RANK
 """
@@ -121,7 +121,7 @@ FROM {database}.{attributes_table}
 WHERE public_shares_top_country = 'US'
 GROUP BY parent_domain
 ORDER by frequency DESC
-LIMIT 5003)
+LIMIT 5000)
 SELECT parent_domain
 FROM RANK
 """
@@ -165,7 +165,7 @@ FROM {database}.{attributes_table}
 WHERE public_shares_top_country = 'US'
 GROUP BY parent_domain
 ORDER by frequency DESC
-LIMIT 5003)
+LIMIT 5000)
 SELECT parent_domain
 FROM RANK
 """
@@ -208,7 +208,7 @@ FROM {database}.{attributes_table}
 WHERE public_shares_top_country = 'US'
 GROUP BY parent_domain
 ORDER by frequency DESC
-LIMIT 5003)
+LIMIT 5000)
 SELECT parent_domain
 FROM RANK
 """
