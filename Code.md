@@ -820,7 +820,7 @@ print(f"beta_tilde's residual variance is: \n{model2.sigma_sq}")
 ## 1. Access data and import packages
 ```
 ### Import packages for data access and analysis
-### Meta specific libraries
+### Meta-specific libraries
 from fbri.private.sql.query import execute
 from svinfer.linear_model import LinearRegression
 from svinfer.processor import DataFrameProcessor
