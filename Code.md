@@ -1047,12 +1047,12 @@ df_2019 = pd.read_csv(r'tpfc_2019_pol.tsv', delimiter = '\t', error_bad_lines=Fa
 df_2020 = pd.read_csv(r'tpfc_2020_pol.tsv', delimiter = '\t', error_bad_lines=False, header = None, names = ['url_rid','clean_url','parent_domain','tpfc_rating','year_month','share_without_clicks','shares','clicks','year','titleNblurb','political'])
 frames = [df_2017, df_2018, df_2019, df_2020]
 
-### Combine all outputs and save it to a new file
+### Combine all outputs and save them to a new file
 tpfc_pol = pd.concat(frames)
 tpfc_pol.to_csv(r'tpfc_pol.csv')
 ```
 
-## 7. Select tpfc-ratled URLs with political_page_affinity (user political affinity group) = -2 for each year (2017, 2018, 2019, 2020 run separately iterated)
+## 7. Select tpfc-rated URLs with political_page_affinity (user political affinity group) = -2 for each year (2017, 2018, 2019, 2020 run separately iterated)
 ```
 sql = f"""
 WITH US_URLs AS (
@@ -1083,7 +1083,7 @@ GROUP BY urlbd.url_rid
 dfneg2 = execute(sql)
 ```
 
-## 8. Select tpfc-ratled URLs with political_page_affinity = -1
+## 8. Select tpfc-rated URLs with political_page_affinity = -1
 ```
 sql = f"""
 WITH US_URLs AS (
@@ -1114,7 +1114,7 @@ GROUP BY urlbd.url_rid
 dfneg1 = execute(sql)
 ```
 
-## 9. Select tpfc-ratled URLs with political_page_affinity = 0
+## 9. Select tpfc-rated URLs with political_page_affinity = 0
 ```
 sql = f"""
 WITH US_URLs AS (
@@ -1145,7 +1145,7 @@ GROUP BY urlbd.url_rid
 dfzero = execute(sql)
 ```
 
-## 10. Select tpfc-ratled URLs with political_page_affinity = +1
+## 10. Select tpfc-rated URLs with political_page_affinity = +1
 ```
 sql = f"""
 WITH US_URLs AS (
@@ -1176,7 +1176,7 @@ GROUP BY urlbd.url_rid
 dfpos1 = execute(sql)
 ```
 
-## 11. Select tpfc-ratled URLs with political_page_affinity = +2
+## 11. Select tpfc-rated URLs with political_page_affinity = +2
 ```
 sql = f"""
 WITH US_URLs AS (
@@ -1225,7 +1225,7 @@ df = pd.DataFrame({'count' : df.groupby('political_page_affinity').size(),
                   }).reset_index()
 ```
 
-## 14. Filter and analyze political-only URLs with fake news (for true news set tpfc_rating == ‘fact chekced as true’)
+## 14. Filter and analyze political-only URLs with fake news (for true news set tpfc_rating == ‘fact checked as true’)
 ```
 from numpy import sqrt
 from numpy import power
