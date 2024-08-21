@@ -5,7 +5,7 @@
 
 
 
-## 1. Access data and install packages
+## 1. Access data and import packages
 ```
 ### Import packages for data access and analysis
 ### Meta-specific libraries
@@ -332,7 +332,7 @@ print(f"beta_tilde's residual variance is: \n{model.sigma_sq}")
 
 # B1. POLITICAL CLASSIFICATION OF URLS (All URLs data are classified as political or non-political content for each year.)
 
-## 1. Access data and install packages
+## 1. Access data and import packages
 ```
 ### Import packages for data access and analysis
 ### Meta-specific libraries
@@ -539,7 +539,7 @@ df_pol = pd.read_csv(r'2017MayNov_pol.tsv', delimiter = '\t', header = None, nam
 
 # B2. URL-LEVEL DATA PREPARATION AND MAJOR ANALYSIS (All URL-level data were analyzed using Python through the following 19 steps)
 
-## 1. Access data and install packages
+## 1. Access data and import packages
 ```
 ### Import packages for data access and analysis
 ### Meta-specific libraries
@@ -817,7 +817,7 @@ print(f"beta_tilde's residual variance is: \n{model2.sigma_sq}")
 
 # C. TPFC-RATED URLS DATA PREPARATION AND MAJOR ANALYSIS (All TPFC-rated URLs were filtered, politically classified, and analyzed utilizing the Python codes below.)
 
-## 1. Access data and install packages
+## 1. Access data and import packages
 ```
 ### Import packages for data access and analysis
 ### Meta specific libraries
